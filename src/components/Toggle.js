@@ -10,7 +10,8 @@ const ToggleBtn = styled.button`
     
 `
 const BtnText = styled.h3`
-    color: ${({ theme }) => theme.text}
+    color: ${({ theme }) => theme.text};
+    // transition: ${({ theme }) => theme.transition};
 `
 
 const Toggle = ({ theme, toggler }) => {

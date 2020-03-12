@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Toolbar from './components/Toolbar'
-import CountryPage from './components/CountryPage'
+import CountryPage from './components/Country/CountryPage'
 
 // Styled Component imports
 import { ThemeProvider } from 'styled-components'
@@ -27,6 +27,8 @@ const ViewContainer = styled.main`
 
 function App() {
   const [theme, setTheme] = useState('light')
+  // country hooks
+  
 
 
   // the function that toggles between themes
