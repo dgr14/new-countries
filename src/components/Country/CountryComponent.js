@@ -1,14 +1,38 @@
 import React from 'react'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 
+const CountryContainer = styled.div`
+
+`
+const CountryFlag = styled.img`
+
+`
+const CountryName = styled.h2`
+
+`
+const CountryPopulation = styled.p`
+
+`
+const CountryRegion = styled.p`
+
+`
+const CountryCapital = styled.p`
+
+`
 
 
 const CountryComponent = props => {
     console.log(props)
     const { countries } = props
+
     return(
         // need to pass props from country page to here
-        <div>{countries.name}</div>
+        <CountryContainer>
+
+            <CountryFlag src={countries.flag}/>
+            <CountryName>{countries.name}</CountryName>
+
+        </CountryContainer>
     )
 }
 

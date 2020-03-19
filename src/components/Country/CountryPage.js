@@ -47,7 +47,7 @@ const MapContainer = styled.div`
 const CountryPage = () => {
     // here is where state is held for countries
     const [countries, setCountries] = useState([])
-    const [region, setRegion] = useState("")
+    const [region, setRegion] = useState([])
 
     
     // gets all country data on api
@@ -77,7 +77,7 @@ const CountryPage = () => {
                 <DropDownContent>
                     {/* here are where country links will go */}
                     <DropDown 
-                        title="Select Country"
+                        dropitle="Select Country"
                         list={mappedRegions}
                     />
                 </DropDownContent>
@@ -88,7 +88,7 @@ const CountryPage = () => {
                  
                 <CountryComponent countries={countries}/>
                 
-                {mappedCountries}
+                {/* {mappedCountries} */}
             </MapContainer>
 
         </CountryPageContainer>

@@ -23,7 +23,7 @@ const DDli = styled.li`
 `
 
 const DropDown = props => {
-    const { title } = props
+    const { dropTitle } = props
     // State for DropDown
     const [listOpen, setListOpen] = useState(false)
     const [headerTitle, setHeaderTitle] = useState(props.title)
@@ -35,7 +35,7 @@ const DropDown = props => {
         return(
             <DDWraper>
                 <DDHeader onClick={() => toggleList()}>
-                    <DDHeaderTitle>{title}</DDHeaderTitle>
+                    <DDHeaderTitle>{dropTitle}</DDHeaderTitle>
                 </DDHeader>
                 <DDList>
                     <DDli></DDli>
