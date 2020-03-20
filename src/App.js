@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Toolbar from './components/Toolbar'
 import CountryPage from './components/Country/CountryPage'
+import Search from './components/Search/Search'
 
 // Styled Component imports
 import { ThemeProvider } from 'styled-components'
@@ -52,6 +53,7 @@ function App() {
           <Toolbar theme={theme} toggler={toggleTheme} />
           <ViewContainer>
             {/* this is where main code will go, nav bar and footer will be below */}
+            <Search />
             <CountryPage />
           </ViewContainer>
         </ProjectContainer>

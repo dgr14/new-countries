@@ -59,7 +59,7 @@ const CountryPage = () => {
     useEffect(() => {
         if(region){
         Axios.get(`https://restcountries.eu/rest/v2/region/${region}`)
-        .then((response) => setCountries(response.data))}
+        .then((response) => console.log(response.data))}
     }, [region])
 
     

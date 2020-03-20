@@ -31,6 +31,9 @@ const CountryComponent = props => {
 
             <CountryFlag src={countries.flag}/>
             <CountryName>{countries.name}</CountryName>
+            <CountryPopulation>{countries.population}</CountryPopulation>
+            <CountryRegion>{countries.region}</CountryRegion>
+            <CountryCapital>{countries.capital}</CountryCapital>
 
         </CountryContainer>
     )

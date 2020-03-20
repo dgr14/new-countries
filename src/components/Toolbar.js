@@ -7,6 +7,7 @@ const Header = styled.header`
     height: 10%;
     width: 100%;
     box-shadow: ${({ theme }) => theme.boxShadow};
+    margin-bottom: 15px;
 `
 
 const Nav = styled.nav`

@@ -30,4 +30,9 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serifkll;
 }
 
+input {
+    background: ${({ theme }) => theme.body };
+    color: ${({ theme }) => theme.text };
+}
+
 `
