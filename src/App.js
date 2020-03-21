@@ -8,6 +8,7 @@ import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from './themes/theme'
 import { GlobalStyles } from './themes/global'
 import styled from 'styled-components'
+import DropDown from './components/DropDown/DropDown';
 
 // *** Styled Components ***
 
@@ -17,12 +18,10 @@ const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
 `
-
 const ViewContainer = styled.main`
-  // overflow-y: auto;
   height: 90%;
   width: 100%;
-  // background-color: red;
+  overflow-y: auto;
 
 `
 
@@ -51,9 +50,14 @@ function App() {
         <ProjectContainer>
           {/* pass the toggle functionality to the button */}
           <Toolbar theme={theme} toggler={toggleTheme} />
+          <Search />
+          {/* drop down menu */}
+          <DropDown 
+            title='select location'
+            
+          />
           <ViewContainer>
             {/* this is where main code will go, nav bar and footer will be below */}
-            <Search />
             <CountryPage />
           </ViewContainer>
         </ProjectContainer>

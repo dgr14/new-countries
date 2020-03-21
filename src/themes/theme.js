@@ -13,6 +13,6 @@ export const darkTheme = {
     text: 'whitesmoke',
     toggleBorder: 'red',
     gradient: '',
-    boxShadow: '0 0 10px black',
+    boxShadow: '0 0 10px #22282d',
     border: '2px solid white'
 }

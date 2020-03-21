@@ -3,7 +3,7 @@ import styled from  'styled-components'
 import { render } from '@testing-library/react'
 
 const DDWraper = styled.div`
-    height: 15%;
+    // height: 15%;
 `
 
 const DDHeader = styled.div`
@@ -22,6 +22,10 @@ const DDli = styled.li`
 
 `
 
+const regionArr = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
+
+
+
 const DropDown = props => {
     const { dropTitle } = props
     // State for DropDown
@@ -35,7 +39,7 @@ const DropDown = props => {
         return(
             <DDWraper>
                 <DDHeader onClick={() => toggleList()}>
-                    <DDHeaderTitle>{dropTitle}</DDHeaderTitle>
+                    <DDHeaderTitle>{props.dropTitle}</DDHeaderTitle>
                 </DDHeader>
                 <DDList>
                     <DDli>klsjadfkjasdhfkj</DDli>

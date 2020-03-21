@@ -4,10 +4,13 @@ import styled from 'styled-components'
 import Toggle from './Toggle'
 
 const Header = styled.header`
+    // position: fixed;
+    z-index: 10;
     height: 10%;
     width: 100%;
     box-shadow: ${({ theme }) => theme.boxShadow};
     margin-bottom: 15px;
+    background: ${({ theme }) => theme.background};
 `
 const Nav = styled.nav`
     height: 100%;
