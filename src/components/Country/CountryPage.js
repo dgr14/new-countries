@@ -61,9 +61,8 @@ const CountryPage = () => {
         Axios.get(`https://restcountries.eu/rest/v2/region/${region}`)
         .then((response) => console.log(response.data))}
     }, [region])
-
     
-    const mappedCountries = countries.map(country => <div>{country.name}</div>)
+    const mappedCountries = countries.map(country => <CountryComponent countryData={country} />)
     const mappedRegions = region.map(region => <div>{region}</div>)
     // console.log
     // console.log(countries)
@@ -85,10 +84,7 @@ const CountryPage = () => {
 
             {/* container to hold country component */}
             <MapContainer>
-                 
-                <CountryComponent countries={countries}/>
-                
-                {/* {mappedCountries} */}
+                {mappedCountries}
             </MapContainer>
 
         </CountryPageContainer>

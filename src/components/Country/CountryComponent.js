@@ -23,17 +23,17 @@ const CountryCapital = styled.p`
 
 const CountryComponent = props => {
     console.log(props)
-    const { countries } = props
+    const { countryData } = props
 
     return(
         // need to pass props from country page to here
         <CountryContainer>
 
-            <CountryFlag src={countries.flag}/>
-            <CountryName>{countries.name}</CountryName>
-            <CountryPopulation>{countries.population}</CountryPopulation>
-            <CountryRegion>{countries.region}</CountryRegion>
-            <CountryCapital>{countries.capital}</CountryCapital>
+            <CountryFlag src={countryData.flag}/>
+            <CountryName>{countryData.name}</CountryName>
+            <CountryPopulation>{countryData.population}</CountryPopulation>
+            <CountryRegion>{countryData.region}</CountryRegion>
+            <CountryCapital>{countryData.capital}</CountryCapital>
 
         </CountryContainer>
     )

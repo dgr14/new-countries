@@ -9,7 +9,6 @@ const Header = styled.header`
     box-shadow: ${({ theme }) => theme.boxShadow};
     margin-bottom: 15px;
 `
-
 const Nav = styled.nav`
     height: 100%;
     display: flex;
@@ -17,7 +16,6 @@ const Nav = styled.nav`
     align-items: center;
 
 `
-
 const Titleh1 = styled.h1`
     font-size: 1.2rem;
     padding-left: 1rem;
