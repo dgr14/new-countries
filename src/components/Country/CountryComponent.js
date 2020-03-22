@@ -40,7 +40,7 @@ function numberWithCommas(num) {
 }
 // ***************************************************
 const CountryComponent = props => {
-    console.log(props)
+    // console.log(props)
     const { countryData } = props
 
     return(

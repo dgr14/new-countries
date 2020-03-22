@@ -27,9 +27,41 @@ const ViewContainer = styled.main`
 
 function App() {
   const [theme, setTheme] = useState('light')
-  // country hooks
-  
 
+  const [regionTitle, setRegionTitle] = useState( 
+    [
+      {
+          id: 0,
+          title: 'Africa',
+          selected: false,
+          key: 'location'
+      },
+      {
+          id: 1,
+          title: 'Americas',
+          selected: false,
+          key: 'location'
+      },
+      {
+          id: 2,
+          title: 'Asia',
+          selected: false,
+          key: 'location'
+      },
+      {
+          id: 3,
+          title: 'Europe',
+          selected: false,
+          key: 'location'
+      },
+      {
+          id: 4,
+          title: 'Oceania',
+          selected: false,
+          key: 'location'
+      }
+    ]
+  )
 
   // the function that toggles between themes
   const toggleTheme = () => {
@@ -43,6 +75,14 @@ function App() {
     }
   }
 
+  function toggleSelected (id, key) {
+    let temp = [key]
+    temp[id].selected = !temp[id].selected
+    setRegionTitle({
+      [key] : temp
+    })
+  }
+
   return (
     <ThemeProvider theme={ theme === 'light' ? lightTheme : darkTheme }>
       <>
@@ -52,9 +92,11 @@ function App() {
           <Toolbar theme={theme} toggler={toggleTheme} />
           <Search />
           {/* drop down menu */}
-          <DropDown 
-            title='select location'
-            
+          <DropDown
+            titleHelper='Region'
+            title='Select Region'
+            list={regionTitle}
+            toggleItem={toggleSelected}
           />
           <ViewContainer>
             {/* this is where main code will go, nav bar and footer will be below */}

@@ -25,7 +25,7 @@ const MapContainer = styled.div`
 const CountryPage = () => {
     // here is where state is held for countries
     const [countries, setCountries] = useState([])
-    const [region, setRegion] = useState([])
+    
     // 
     const [displayRegion, setDisplayRegion] = useState(false)
 
@@ -35,15 +35,10 @@ const CountryPage = () => {
         Axios.get('https://restcountries.eu/rest/v2/all')
         .then((response) => setCountries(response.data))
     }, [])
-    // to separate by region
-    useEffect(() => {
-        if(region){
-        Axios.get(`https://restcountries.eu/rest/v2/region/${region}`)
-        .then((response) => console.log(response.data))}
-    }, [region])
+    
     
     const mappedCountries = countries.map(country => <CountryComponent countryData={country} />)
-    const mappedRegions = region.map(region => <div>{region}</div>)
+    // const mappedRegions = region.map(region => <div>{region}</div>)
    
     // console.log
     // console.log(countries)
