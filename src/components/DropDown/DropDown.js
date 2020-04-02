@@ -25,6 +25,10 @@ const DDList = styled.ul`
 
 const DDli = styled.li`
 
+
+    :hover{
+        color: red;
+    }
 `
 // ************************************************************
 const DropDown = props => {
@@ -46,17 +50,17 @@ const DropDown = props => {
 
     const toggleList = () =>  setListOpen( prevState => !prevState )
 
-    static getDerivedStateFromProps(nextProps){
-        const count = nextProps.list.filter(function(a) { return a.selected }).length;
-        console.log(count)
-        if (count === 0) {
-            return {headerTitle: nextProps.title}
-        } else if (count === 1) {
-            return {headerTitle: `${count} ${nextProps.titleHelper}`}
-        } else if (count > 1) {
-            return {headerTitle: `${count} ${nextProps.titleHelper}s`}
-        }
-    }
+    // static getDerivedStateFromProps(nextProps){
+    //     const count = nextProps.list.filter(function(a) { return a.selected }).length;
+    //     console.log(count)
+    //     if (count === 0) {
+    //         return {headerTitle: nextProps.title}
+    //     } else if (count === 1) {
+    //         return {headerTitle: `${count} ${nextProps.titleHelper}`}
+    //     } else if (count > 1) {
+    //         return {headerTitle: `${count} ${nextProps.titleHelper}s`}
+    //     }
+    // }
 
     return(
         <DDWraper>
