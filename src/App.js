@@ -17,6 +17,14 @@ const ProjectContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  `
+const TopPortion = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 `
 const ViewContainer = styled.main`
   height: 90%;
@@ -88,16 +96,18 @@ function App() {
       <>
         <GlobalStyles />
         <ProjectContainer>
-          {/* pass the toggle functionality to the button */}
-          <Toolbar theme={theme} toggler={toggleTheme} />
-          <Search />
-          {/* drop down menu */}
-          <DropDown
-            titleHelper='Region'
-            title='Select Region'
-            list={regionTitle}
-            toggleItem={toggleSelected}
-          />
+          <TopPortion>
+            {/* pass the toggle functionality to the button */}
+            <Toolbar theme={theme} toggler={toggleTheme} />
+            <Search />
+            {/* drop down menu */}
+            <DropDown
+              titleHelper='Region'
+              title='Select Region'
+              list={regionTitle}
+              toggleItem={toggleSelected}
+            />
+          </TopPortion>
           <ViewContainer>
             {/* this is where main code will go, nav bar and footer will be below */}
             <CountryPage />

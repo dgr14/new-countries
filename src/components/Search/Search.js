@@ -10,11 +10,11 @@ const SearchContainer = styled.div`
     align-items: center;
     justify-content: center;
     height: 3rem;
-    width: 365px;
-
+    width: 90%;
+    outline: 2px solid black;
+    
 `
 const SearchInput = styled.input`
-    outline: 2px solid black;
     width: 100%;
 
 `
