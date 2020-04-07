@@ -6,8 +6,11 @@ import Axios from 'axios'
 
 const DDWraper = styled.div`
     // height: 15%;
+    width: 60%;
     border: 2px solid black;
     box-shadow: ${({ theme }) => theme.boxShadow};
+    margin-left: 1rem;
+    border-radius: 10px;
 
 `
 

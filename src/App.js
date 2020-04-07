@@ -21,17 +21,28 @@ const ProjectContainer = styled.div`
   align-items: center;
   `
 const TopPortion = styled.div`
+  width: 100%;
+  height: 30%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
+  outline: 2px solid red;
 `
 const ViewContainer = styled.main`
   height: 90%;
   width: 100%;
   overflow-y: auto;
+  padding-top: 50px;
 
 `
+
+// Most Important things to address
+// 1. How to add additional colors & keep theme toggle functionality
+// 2. How to get my DropDown to make the proper axios calls - could be hardcoded but I would rather not
+// also DropDown z-index
+// 3. Get my search working
+//
 
 function App() {
   const [theme, setTheme] = useState('light')
@@ -67,6 +78,7 @@ function App() {
           title: 'Oceania',
           selected: false,
           key: 'location'
+          
       }
     ]
   )

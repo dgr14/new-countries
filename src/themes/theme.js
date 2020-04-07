@@ -6,6 +6,7 @@ export const lightTheme = {
     gradient: '',
     boxShadow: '0 0 10px lightgrey',
     border: '2px solid black',
+    
 }
 
 export const darkTheme = {
@@ -14,5 +15,6 @@ export const darkTheme = {
     toggleBorder: 'red',
     gradient: '',
     boxShadow: '0 0 10px #22282d',
-    border: '2px solid white'
+    border: '2px solid white',
+    
 }

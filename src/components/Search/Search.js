@@ -9,14 +9,19 @@ const SearchContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 3rem;
+    height: 20%;
     width: 90%;
-    outline: 2px solid black;
+    margin-left: 1rem;
     
 `
 const SearchInput = styled.input`
     width: 100%;
-
+    height: 100%;
+    border-radius: 10px;
+    
+    :focus{
+        outline: none;
+    }
 `
 // ********************************************************
 const Search = props => {
