@@ -47,6 +47,9 @@ const ViewContainer = styled.main`
 function App() {
   const [theme, setTheme] = useState('light')
 
+  const [countries, setCountries] = useState([])
+  const [country, setCountry] = useState({})
+
   const [regionTitle, setRegionTitle] = useState( 
     [
       {
@@ -118,11 +121,12 @@ function App() {
               title='Select Region'
               list={regionTitle}
               toggleItem={toggleSelected}
+              setCountries={setCountries}
             />
           </TopPortion>
           <ViewContainer>
             {/* this is where main code will go, nav bar and footer will be below */}
-            <CountryPage />
+            <CountryPage countries={countries} setCountries={setCountries} />
           </ViewContainer>
         </ProjectContainer>
       </>

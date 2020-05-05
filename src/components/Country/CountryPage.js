@@ -22,9 +22,9 @@ const MapContainer = styled.div`
     justify-content: center;
 `
 
-const CountryPage = () => {
+const CountryPage = props => {
     // here is where state is held for countries
-    const [countries, setCountries] = useState([])
+    const {countries, setCountries } = props
     
     // 
     const [displayRegion, setDisplayRegion] = useState(false)

@@ -36,7 +36,7 @@ const DDli = styled.li`
 // ************************************************************
 const DropDown = props => {
     console.log(props)
-    const { list, dropTitle, toggleItem, titleHelper } = props
+    const { list, dropTitle, toggleItem, titleHelper, setCountries } = props
     const [region, setRegion] = useState([])
     // State for DropDown
     const [listOpen, setListOpen] = useState(false)
@@ -46,7 +46,7 @@ const DropDown = props => {
     useEffect(() => {
         if(region){
         Axios.get(`https://restcountries.eu/rest/v2/region/${region}`)
-        .then((response) => setRegion(response.data))}
+        .then((response) => setCountries(response.data))}
     }, [region])
 
     const handleClickOutside = () => setListOpen(false)
@@ -74,7 +74,7 @@ const DropDown = props => {
             
             {listOpen && <DDList>
                 {list.map((item) => (
-                    <DDli key={item.title} onClick={() => toggleItem(item.id, item.key)}>{item.title}{item.selected && `&#10003`}</DDli>
+                    <DDli key={item.title} onClick={() => setRegion(item.title)}>{item.title}{item.selected && `&#10003`}</DDli>
                 ))}
                 
             </DDList>

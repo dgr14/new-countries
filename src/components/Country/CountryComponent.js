@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'react-router-dom'
 import styled from 'styled-components'
 
 const CountryContainer = styled.div`
@@ -35,6 +36,9 @@ const CountryRegion = styled.p`
 const CountryCapital = styled.p`
 
 `
+const CountryLink = styled(Link)`
+
+`
 function numberWithCommas(num) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
@@ -45,6 +49,7 @@ const CountryComponent = props => {
 
     return(
         // need to pass props from country page to here
+        
         <CountryContainer>
 
             <FlagContainer>
@@ -56,6 +61,7 @@ const CountryComponent = props => {
                 <CountryPopulation>Population:  {numberWithCommas(countryData.population)}</CountryPopulation>
                 <CountryRegion>Region:  {countryData.region}</CountryRegion>
                 <CountryCapital>Capital:  {countryData.capital}</CountryCapital>
+                <CountryLink> </CountryLink>
             </InfoContainer>
 
         </CountryContainer>
