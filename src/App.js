@@ -26,8 +26,9 @@ const TopPortion = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
-  outline: 2px solid red;
+  justify-content: space-evenly;
+  outline: 2px solid black;
+  margin-botton: 20px;
 `
 const ViewContainer = styled.main`
   height: 90%;

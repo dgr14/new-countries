@@ -9,7 +9,7 @@ const Header = styled.header`
     // height: 10%;
     width: 100%;
     box-shadow: ${({ theme }) => theme.boxShadow};
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
     background: ${({ theme }) => theme.background};
 `
 const Nav = styled.nav`
